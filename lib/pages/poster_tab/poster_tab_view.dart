@@ -41,7 +41,7 @@ class PosterTabPage extends GetView<PosterTabLogic> {
             width: 22,
             height: 22,
           ),
-          label: 'Jigsaw puzzle',
+          label: 'Puzzle',
         ),
         BottomNavigationBarItem(
           icon: Image.asset(

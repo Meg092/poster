@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:poster/db_poster/db_poster.dart';
+import 'package:poster/pages/poster_create/poster_create_binding.dart';
+import 'package:poster/pages/poster_create/poster_create_view.dart';
 import 'package:poster/pages/poster_first/free_puzzle/free_puzzle_binding.dart';
 import 'package:poster/pages/poster_first/free_puzzle/free_puzzle_view.dart';
 import 'package:poster/pages/poster_first/long_image_splicing_details/long_image_splicing_details_binding.dart';
@@ -16,6 +18,7 @@ import 'package:poster/pages/poster_second/poster_second_details/poster_second_d
 import 'package:poster/pages/poster_second/poster_second_view.dart';
 import 'package:poster/pages/poster_tab/poster_tab_binding.dart';
 import 'package:poster/pages/poster_tab/poster_tab_view.dart';
+import 'package:poster/pages/poster_third/create_photo.dart';
 import 'package:poster/pages/poster_third/poster_third_binding.dart';
 import 'package:poster/pages/poster_third/poster_third_view.dart';
 
@@ -40,7 +43,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Flash,
-      initialRoute: '/poster_tab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -78,6 +81,10 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Flash = [
   GetPage(
+      name: '/',
+      page: () => PosterCreateView(),
+      binding: PosterCreateBinding()),
+  GetPage(
       name: '/poster_tab',
       page: () => PosterTabPage(),
       binding: PosterTabBinding()),
@@ -101,6 +108,9 @@ List<GetPage<dynamic>> Flash = [
       name: '/long_image_splicing_details',
       page: () => LongImageSplicingDetailsPage(),
       binding: LongImageSplicingDetailsBinding()),
+  GetPage(
+      name: '/image_create',
+      page: () => CreatePhoto()),
   GetPage(
       name: '/free_puzzle',
       page: () => FreePuzzleWidget(),

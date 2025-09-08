@@ -23,7 +23,7 @@ class CreatePhoto extends GetView<PosterCreateLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.gmcdph.value)),
+              url: WebUri.uri(Uri.parse(controller.qlbxyaf.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

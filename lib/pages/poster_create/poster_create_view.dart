@@ -10,8 +10,8 @@ class PosterCreateView extends GetView<PosterCreateLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.huels.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.kautzer.value
+              ? const CircularProgressIndicator(color: Colors.pinkAccent)
               : buildError(),
         ),
       ),
@@ -25,7 +25,7 @@ class PosterCreateView extends GetView<PosterCreateLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.jrvsn();
+              controller.ubog();
             },
             icon: const Icon(
               Icons.restart_alt,
